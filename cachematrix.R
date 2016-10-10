@@ -57,14 +57,14 @@ makeCacheMatrix <- function(m=matrix()){ # Defining the function with one argume
 
 
 ############################################################################################################
-# cachesolve - Function which is used to calculate the matirx inverse
+# cacheSolve - Function which is used to calculate the matirx inverse
 # This object will refer the objects of makeCacheMatrix with the help of lexical scoping funtionality
 # If we pass the same matrix, inverse matrix of it which is cached will be passed by makeCacheMatrix object
-# If for new value, then it will pass NULL and its respective inverse value is calculated in this cachesolve function
+# If for new value, then it will pass NULL and its respective inverse value is calculated in this cacheSolve function
 ############################################################################################################
 
-# creating a function cachesolve which will carry an argument in it
-cachesolve <- function(m){
+# creating a function cacheSolve which will carry an argument in it
+cacheSolve <- function(m){
     
     # we are trying to get the value of matrix inverse for the matrix passed if stored in cache (i.e in the makeCacheMatrix environment) through lexical scoping
     # we try to access the getter method of inverse matrix, getmatrix() in makeCacheMatrix environment
@@ -111,12 +111,12 @@ m=rbind(x1,x2,x3,x4)
 # Kindly u can enable it if interested by removing # from below two lines
 ############################################################################################################
 
-# debug(cachesolve)
+# debug(cacheSolve)
 # debug(makeCacheMatrix)
 
 ############################################################################################################
 # Passing a Matrix to find a inverse of it using lexical scoping
 ############################################################################################################
 
-cachesolve(makeCacheMatrix(m))
+cacheSolve(makeCacheMatrix(m))
 
